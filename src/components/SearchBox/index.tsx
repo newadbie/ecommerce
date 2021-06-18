@@ -1,10 +1,10 @@
-import { Input, InputAdornment } from "@material-ui/core";
-import FormControl from "@material-ui/core/FormControl";
+import { FormControl, Input, InputAdornment } from "@material-ui/core";
 import React from "react";
 import Select, { StylesConfig } from "react-select";
 import SearchIcon from "@material-ui/icons/Search";
 import classes from "./style.module.scss";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import Button from "@material-ui/core/Button";
 
 type MyOptionType = {
   label: string;
@@ -67,7 +67,6 @@ const SearchInput = () => {
       <div className={classes.search}>
         <FormControl fullWidth>
           <Input
-            aria-invalid="true"
             id="search"
             disableUnderline
             placeholder="Search Products, categories ..."

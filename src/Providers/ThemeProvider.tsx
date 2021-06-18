@@ -1,15 +1,21 @@
 import {
-  createMuiTheme,
   ThemeProvider,
   responsiveFontSizes,
+  createTheme,
 } from "@material-ui/core/styles";
 import React from "react";
 
+declare module "@material-ui/core/Button" {
+  interface ButtonPropsVariantOverrides {
+    bright: true;
+  }
+}
+
 const MaterialProvider = ({ children }: { children: React.ReactNode }) => {
-  let defaultTheme = createMuiTheme();
+  let defaultTheme = createTheme();
   defaultTheme = responsiveFontSizes(defaultTheme);
 
-  const theme = createMuiTheme({
+  const theme = createTheme({
     palette: {
       primary: {
         main: "rgba(21, 21, 21, 1)",
@@ -18,34 +24,44 @@ const MaterialProvider = ({ children }: { children: React.ReactNode }) => {
         main: "rgba(106, 152, 60, 1)",
       },
     },
-    overrides: {
+    components: {
       MuiButton: {
-        root: {
-          borderRadius: "12px",
-          borderWidth: "2px",
-          borderStyle: "none",
-          borderColor: "transparent",
-          fontSize: "15px",
-          fontWeight: 700,
-          textTransform: "none",
-        },
-        outlined: {
-          backgroundColor: "transparent",
-          borderColor: "#92c064",
-          color: "rgba(21,21,21,1)",
-          padding: "12px 16px",
-        },
-        contained: {
-          backgroundColor: "#6a983c",
-          border: "#46760a",
-          color: "#FFF",
-          padding: "12px 16px",
-        },
-        sizeLarge: {
-          padding: "12px 48px",
-        },
-        sizeSmall: {
-          padding: "6px 12px",
+        variants: [
+          {
+            props: { variant: "bright" },
+            style: {
+              backgroundColor: "rgba(245, 245, 245, 1)",
+            },
+          },
+        ],
+        styleOverrides: {
+          root: {
+            borderRadius: "12px",
+            borderWidth: "2px",
+            borderStyle: "none",
+            borderColor: "transparent",
+            fontSize: "15px",
+            fontWeight: 700,
+            textTransform: "none",
+          },
+          outlined: {
+            backgroundColor: "transparent",
+            borderColor: "#92c064",
+            color: "rgba(21,21,21,1)",
+            padding: "12px 16px",
+          },
+          contained: {
+            backgroundColor: "#6a983c",
+            border: "#46760a",
+            color: "#FFF",
+            padding: "12px 16px",
+          },
+          sizeLarge: {
+            padding: "12px 48px",
+          },
+          sizeSmall: {
+            padding: "6px 12px",
+          },
         },
       },
     },
