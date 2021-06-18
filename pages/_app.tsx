@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import MaterialUiProvider from "../src/Providers/MaterialUi";
+import ThemeProvider from "../src/Providers/ThemeProvider";
 import "../styles/globals.css";
 
 import type { AppProps } from "next/app";
@@ -25,10 +25,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         />
         <meta name="author" content="Adrian Bielec, zilibdev@gmail.com" />
       </Head>
-      <MaterialUiProvider>
+      <ThemeProvider>
         <CssBaseline />
         <Component {...pageProps} />
-      </MaterialUiProvider>
+      </ThemeProvider>
     </>
   );
 };
