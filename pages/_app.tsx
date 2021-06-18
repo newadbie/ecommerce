@@ -5,6 +5,7 @@ import ThemeProvider from "../src/Providers/ThemeProvider";
 import "../styles/globals.css";
 
 import type { AppProps } from "next/app";
+import Container from "@material-ui/core/Container";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
@@ -27,7 +28,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Head>
       <ThemeProvider>
         <CssBaseline />
-        <Component {...pageProps} />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
       </ThemeProvider>
     </>
   );
