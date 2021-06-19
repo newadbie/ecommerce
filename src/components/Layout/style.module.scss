@@ -1,0 +1,25 @@
+.header {
+  margin: 0 45px;
+
+  .top__navigation {
+    @include flex-row-between;
+    padding: 16px 0;
+
+    .item {
+      @include reset-list;
+
+      & + * {
+        margin-left: 33px;
+      }
+
+      & > a {
+        text-decoration: none;
+
+        &[href^="tel:"],
+        &[href^="mailto:"] {
+          color: $primary-a;
+        }
+      }
+    }
+  }
+}

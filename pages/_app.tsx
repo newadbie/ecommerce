@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import ThemeProvider from "../src/Providers/ThemeProvider";
-import "../styles/globals.css";
+import "../styles/main.scss";
 
 import type { AppProps } from "next/app";
-import Container from "@material-ui/core/Container";
+import MainLayout from "../src/layouts/mainLayout";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
@@ -27,10 +27,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name="author" content="Adrian Bielec, zilibdev@gmail.com" />
       </Head>
       <ThemeProvider>
-        <CssBaseline />
-        <Container>
+        <MainLayout>
+          <CssBaseline />
           <Component {...pageProps} />
-        </Container>
+        </MainLayout>
       </ThemeProvider>
     </>
   );
