@@ -5,6 +5,10 @@ import React from "react";
 import SearchBox from "../SearchBox";
 import Brand from "../../../assets/Brand.svg";
 import classes from "./style.module.scss";
+import { IconButton } from "@material-ui/core";
+import Badge from "@material-ui/core/Badge";
+import User from "../../../assets/ic-actions-user.svg";
+import Basket from "../../../assets/ic-ecommerce-basket.svg";
 
 const Header = () => {
   return (
@@ -42,6 +46,26 @@ const Header = () => {
           <Brand />
         </Box>
         <SearchBox />
+        <Box>
+          <Stack direction="row">
+            <IconButton>
+              <User />
+            </IconButton>
+            <IconButton>
+              <Badge
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                badgeContent={4}
+                color="primary"
+                className={classes.badge}
+              >
+                <Basket />
+              </Badge>
+            </IconButton>
+          </Stack>
+        </Box>
       </Box>
     </header>
   );

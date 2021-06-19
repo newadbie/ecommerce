@@ -25,6 +25,13 @@ const MaterialProvider = ({ children }: { children: React.ReactNode }) => {
       },
     },
     components: {
+      MuiBadge: {
+        styleOverrides: {
+          colorPrimary: {
+            backgroundColor: "rgba(229, 112, 75, 1)",
+          },
+        },
+      },
       MuiButton: {
         variants: [
           {

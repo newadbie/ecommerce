@@ -4,6 +4,7 @@
   .top__navigation {
     @include flex-row-between;
     padding: 16px 0;
+    border-bottom: 1px solid rgba(21, 21, 21, 0.05);
 
     .item {
       @include reset-list;
@@ -21,5 +22,10 @@
         }
       }
     }
+  }
+
+  .main {
+    @include flex-row-between;
+    padding: 40px 0;
   }
 }
