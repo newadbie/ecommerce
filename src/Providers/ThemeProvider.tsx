@@ -4,6 +4,7 @@ import React from 'react'
 declare module '@material-ui/core/Button' {
   interface ButtonPropsVariantOverrides {
     bright: true
+    light: true
   }
 }
 
@@ -34,6 +35,16 @@ const MaterialProvider = ({ children }: { children: React.ReactNode }) => {
             props: { variant: 'bright' },
             style: {
               backgroundColor: 'rgba(245, 245, 245, 1)'
+            }
+          },
+          {
+            props: { variant: 'light' },
+            style: {
+              padding: '0',
+              margin: '0',
+              background: 'transparent',
+              fontSize: '15px',
+              fontWeight: 500
             }
           }
         ],

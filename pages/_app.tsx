@@ -1,39 +1,31 @@
-import React, { useEffect } from "react";
-import Head from "next/head";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import ThemeProvider from "../src/Providers/ThemeProvider";
-import "../styles/main.scss";
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { StyledEngineProvider } from '@material-ui/core/styles'
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import React from 'react'
 
-import type { AppProps } from "next/app";
-import MainLayout from "../src/layouts/mainLayout";
+import ThemeProvider from '../src/Providers/ThemeProvider'
+import MainLayout from '../src/layouts/mainLayout'
+import '../styles/main.scss'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  useEffect(() => {
-    const jssStyles = document.querySelector("#jss-server-side");
-
-    jssStyles &&
-      jssStyles.parentElement &&
-      jssStyles.parentElement.removeChild(jssStyles);
-  }, []);
-
   return (
     <>
       <Head>
         <title>Ecommerce Open Source project</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <meta name="author" content="Adrian Bielec, zilibdev@gmail.com" />
       </Head>
-      <ThemeProvider>
-        <MainLayout>
-          <CssBaseline />
-          <Component {...pageProps} />
-        </MainLayout>
-      </ThemeProvider>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider>
+          <MainLayout>
+            <CssBaseline />
+            <Component {...pageProps} />
+          </MainLayout>
+        </ThemeProvider>
+      </StyledEngineProvider>
     </>
-  );
-};
+  )
+}
 
-export default MyApp;
+export default MyApp

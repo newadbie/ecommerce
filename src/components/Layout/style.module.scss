@@ -1,8 +1,9 @@
-.header {
-  margin: 0 45px;
+$main-margin: 0 45px;
 
+.header {
   .top__navigation {
     @include flex-row-between;
+    margin: $main-margin;
     padding: 16px 0;
     border-bottom: 1px solid rgba(21, 21, 21, 0.05);
 
@@ -16,8 +17,8 @@
       & > a {
         text-decoration: none;
 
-        &[href^="tel:"],
-        &[href^="mailto:"] {
+        &[href^='tel:'],
+        &[href^='mailto:'] {
           color: $primary-a;
         }
       }
@@ -27,5 +28,23 @@
   .main {
     @include flex-row-between;
     padding: 40px 0;
+
+    .brand {
+      margin: $main-margin;
+    }
+  }
+
+  .categories__container {
+    background-color: $primary-h;
+
+    .categories {
+      padding: 16px 0;
+
+      .button {
+        & + * {
+          padding-left: 20px;
+        }
+      }
+    }
   }
 }

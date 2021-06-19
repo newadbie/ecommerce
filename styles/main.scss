@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 a {
   color: $secondary-a;
 }
@@ -5,4 +9,13 @@ a {
 ul {
   margin: 0;
   padding: 0;
+}
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.scroll-menu-arrow--disabled {
+  visibility: hidden;
 }
