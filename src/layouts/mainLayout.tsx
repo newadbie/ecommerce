@@ -1,7 +1,7 @@
-import Container from "@material-ui/core/Container";
-import React from "react";
+import Container from '@material-ui/core/Container'
+import React from 'react'
 
-import Header from "../components/Layout/header";
+import Header from '../components/Layout/header'
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -9,7 +9,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <Header />
       {children}
     </Container>
-  );
-};
+  )
+}
 
-export default MainLayout;
+export default MainLayout

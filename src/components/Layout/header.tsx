@@ -1,14 +1,11 @@
-import Stack from "@material-ui/core/Stack";
-import Box from "@material-ui/system/Box";
-import React from "react";
+import Stack from '@material-ui/core/Stack'
+import Box from '@material-ui/system/Box'
+import React from 'react'
 
-import SearchBox from "../SearchBox";
-import Brand from "../../../assets/Brand.svg";
-import classes from "./style.module.scss";
-import { IconButton } from "@material-ui/core";
-import Badge from "@material-ui/core/Badge";
-import User from "../../../assets/ic-actions-user.svg";
-import Basket from "../../../assets/ic-ecommerce-basket.svg";
+import SearchBox from '../SearchBox'
+import BrandComponent from './brand'
+import SessionDetails from './sessionDetails'
+import classes from './style.module.scss'
 
 const Header = () => {
   return (
@@ -42,33 +39,12 @@ const Header = () => {
         </Box>
       </Box>
       <Box className={classes.main}>
-        <Box className={classes.brand}>
-          <Brand />
-        </Box>
+        <BrandComponent />
         <SearchBox />
-        <Box>
-          <Stack direction="row">
-            <IconButton>
-              <User />
-            </IconButton>
-            <IconButton>
-              <Badge
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                badgeContent={4}
-                color="primary"
-                className={classes.badge}
-              >
-                <Basket />
-              </Badge>
-            </IconButton>
-          </Stack>
-        </Box>
+        <SessionDetails />
       </Box>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
