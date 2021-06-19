@@ -14,7 +14,7 @@ type MyOptionType = {
 type IsMulti = false;
 
 const customStyles: StylesConfig<MyOptionType, IsMulti> = {
-  control: (provided) => ({
+  control: (provided, state) => ({
     ...provided,
     backgroundColor: "transparent",
     border: "none",
@@ -25,8 +25,11 @@ const customStyles: StylesConfig<MyOptionType, IsMulti> = {
     backgroundColor: state.isSelected
       ? "rgba(106, 152, 60, 1)"
       : state.isFocused
-      ? "rgba(106, 152, 60, .5)"
+      ? "rgba(106, 152, 60, .2)"
       : "transparent",
+    ":active": {
+      backgroundColor: "rgba(106, 152, 60, .5)",
+    },
   }),
 };
 
