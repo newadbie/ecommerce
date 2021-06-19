@@ -22,6 +22,7 @@
     "sass": "^1.35.1"
   },
   "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@types/react": "17.0.11",
     "@types/react-select": "^4.0.15",
     "eslint": "7.28.0",

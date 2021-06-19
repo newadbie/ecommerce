@@ -1,13 +1,7 @@
-import { Button } from "@material-ui/core";
 import React from "react";
-import SearchBox from "../src/components/SearchBox";
 
 const Home = () => {
-  return (
-    <div>
-      <SearchBox />
-    </div>
-  );
+  return <div>Hejka</div>;
 };
 
 export default Home;
