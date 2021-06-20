@@ -61,8 +61,15 @@ const MaterialProvider = ({ children }: { children: React.ReactNode }) => {
           outlined: {
             backgroundColor: 'transparent',
             borderColor: '#92c064',
+            borderWidth: '3px',
+            borderStyle: 'solid',
             color: 'rgba(21,21,21,1)',
-            padding: '12px 16px'
+            padding: '12px 16px',
+            '&:hover': {
+              borderColor: '#92c064',
+              borderWidth: '3px',
+              borderStyle: 'solid'
+            }
           },
           contained: {
             backgroundColor: '#6a983c',
