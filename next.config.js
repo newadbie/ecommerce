@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
   reactStrictMode: true,
+  optimizeFonts: true,
   images: {
     disableStaticImages: true,
   },

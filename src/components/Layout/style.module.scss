@@ -1,9 +1,6 @@
-$main-margin: 0 45px;
-
 .header {
   .top__navigation {
     @include flex-row-between;
-    margin: $main-margin;
     padding: 16px 0;
     border-bottom: 1px solid rgba(21, 21, 21, 0.05);
 
@@ -28,10 +25,6 @@ $main-margin: 0 45px;
   .main {
     @include flex-row-between;
     padding: 40px 0;
-
-    .brand {
-      margin: $main-margin;
-    }
   }
 
   .categories__container {
@@ -42,8 +35,30 @@ $main-margin: 0 45px;
 
       .button {
         & + * {
-          padding-left: 20px;
+          padding-left: 40px;
         }
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 64px 0;
+  
+  .column {
+    .title {
+      margin-bottom: 16px;
+    }
+
+    .item {
+      list-style: none;
+
+      & > a {
+        text-decoration: none;
+      }
+
+      & + * {
+        margin-top: 16px;
       }
     }
   }
