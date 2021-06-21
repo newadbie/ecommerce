@@ -1,0 +1,23 @@
+.product {
+  width: 270px;
+
+  .header {
+    height: 180px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .muted {
+    font-size: 12px;
+    margin-top: 4px;
+    color: $primary-b;
+  }
+
+  .discount {
+    left: 12px;
+    top: 12px;
+    position: absolute;
+    z-index: 100;
+  }
+}

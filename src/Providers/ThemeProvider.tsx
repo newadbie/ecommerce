@@ -22,6 +22,14 @@ const MaterialProvider = ({ children }: { children: React.ReactNode }) => {
       }
     },
     components: {
+      MuiChip: {
+        styleOverrides: {
+          colorSecondary: {
+            backgroundColor: 'rgba(244, 248, 236, 1)',
+            color: 'rgba(106, 152, 60, 1)'
+          }
+        }
+      },
       MuiBadge: {
         styleOverrides: {
           colorPrimary: {
@@ -88,6 +96,7 @@ const MaterialProvider = ({ children }: { children: React.ReactNode }) => {
     },
     typography: {
       fontFamily: 'Poppins',
+
       h1: {
         lineHeight: '140%',
         fontWeight: 600

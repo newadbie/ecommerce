@@ -4,7 +4,7 @@ module.exports = {
   reactStrictMode: true,
   optimizeFonts: true,
   images: {
-    disableStaticImages: true,
+    disableStaticImages: false,
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],

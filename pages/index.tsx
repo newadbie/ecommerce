@@ -1,4 +1,3 @@
-import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import React from 'react'
 
@@ -33,6 +32,61 @@ const firstRowMenu: AsideMenuProps = {
   buttonText: 'More categories'
 }
 
+const secondRowMenu: AsideMenuProps = {
+  title: 'Best selling products',
+  items: [
+    {
+      text: 'Kitchen',
+      link: '#'
+    },
+    {
+      text: 'Meat and fish',
+      link: '#'
+    },
+    {
+      text: 'Special nutrition',
+      link: '#'
+    },
+    {
+      text: 'Pharmacy',
+      link: '#'
+    },
+    {
+      text: 'Baby',
+      link: '#'
+    }
+  ],
+  buttonText: 'More products'
+}
+
+const thirdRowMenu: AsideMenuProps = {
+  title: 'Best from Farmers',
+  items: [
+    {
+      text: 'Carrots',
+      link: '#'
+    },
+    {
+      text: 'Tomatoes',
+      link: '#'
+    },
+    {
+      text: 'Potatoes',
+      link: '#'
+    },
+    {
+      text: 'Chicken',
+      link: '#'
+    },
+    {
+      text: 'Pork',
+      link: '#'
+    }
+  ],
+  buttonText: 'More products'
+}
+
+
 const Home = () => {
   return (
     <Container>
@@ -40,6 +94,16 @@ const Home = () => {
         secondColumn={<BanerSubfocus caption="Banner subfocus" title="Space for heading" buttonText="Read recepies" />}
         thirdColumn={<BanerSubfocus caption="Banner subfocus" title="Space for heading" buttonText="Read recepies" />}
         menu={firstRowMenu}
+      />
+      <RowWithMenu
+        secondColumn={<BanerSubfocus caption="Banner subfocus" title="Space for heading" buttonText="Read recepies" />}
+        thirdColumn={<BanerSubfocus caption="Banner subfocus" title="Space for heading" buttonText="Read recepies" />}
+        menu={secondRowMenu}
+      />
+      <RowWithMenu
+        secondColumn={<BanerSubfocus caption="Banner subfocus" title="Space for heading" buttonText="Read recepies" />}
+        thirdColumn={<BanerSubfocus caption="Banner subfocus" title="Space for heading" buttonText="Read recepies" />}
+        menu={thirdRowMenu}
       />
     </Container>
   )
